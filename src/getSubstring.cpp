@@ -19,5 +19,15 @@ original String
 
 char * get_sub_string(char *str, int i, int j){
 
-    return NULL;
+	if (str == " " || str == NULL || i > j)
+		return NULL;
+	char *sub;
+	int k, l;
+	k = j - i;
+	sub = (char *)malloc(k*sizeof(char));
+	for (l = 0; i <= j; l++, i++) {
+		sub[l] = str[i];
+	}
+	sub[l] = '\0';
+	return sub;
 }
